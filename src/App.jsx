@@ -6,13 +6,15 @@ import Window21 from '../components/Window21';
 import Window22 from '../components/Window22';
 import Window23 from '../components/Window23';
 
+import bgVideo from './assets/bgvideo2.mp4';
+
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
       <video className="bgvideo" autoPlay muted loop>
-        <source src="src\assets\bgvideo2.mp4" />
+        <source src={bgVideo} />
       </video>
       <div className="area1">
         <Window11 />

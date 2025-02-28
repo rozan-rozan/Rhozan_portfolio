@@ -5,6 +5,9 @@
     scrollbar-width: none;
     font-family: "poppins", serif;
 }
+:root{
+    --fontgrey: rgba(255, 255, 255, 0.5);
+}
 .bgvideo{
     position: fixed;
     width: 110vw;
@@ -99,6 +102,13 @@ body{
     margin-bottom: 10px;
     cursor: pointer;
     fill: white;
+    transition: 0.5s;
+    scale: 1;
+}
+.themeButton:hover{
+    fill: var(--fontgrey);
+    transition: 0.5s;
+    scale: 1.1;
 }
 .themeButton svg:last-child{
     display: none;
@@ -124,7 +134,7 @@ body{
     margin-bottom: 20px;
 }
 .sectionTitle span:first-child{
-    color: rgb(200, 200, 200);
+    color: var(--fontgrey);
 }
 .sectionContent{
     width: 100%;

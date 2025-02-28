@@ -14,10 +14,9 @@ function ProjectList(props) {
             </div>
             <div className="projectDesc">{props.desc}</div>
             <div className="projectTools">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JS</span>
-                <span>REACT</span>
+                {props.tools.map((tool, index) => (
+                    <span key={index}>{tool}</span>
+                ))}
             </div>
         </div>
     )
@@ -37,16 +36,31 @@ function Window22() {
                     Its main features include a product catalog, ordering system, product management, and admin 
                     authentication. With a responsive and user-friendly design, this website was developed based on 
                     the store owner's needs analysis and tested to ensure optimal performance."
+                    tools={["HTML", "Bootstrap", "CSS", "JS", "PHP", "MySQL"]}
                 />
                 <ProjectList 
                     title="KIDZSEMA EDUCATION WEBSITE" 
                     desc="The Kidzsema Education website is a marketing platform for children's educational 
                     services, showcasing programs, advantages, and the registration system. Developed by a team, 
                     I played a role as a programmer, ensuring the website is responsive, user-friendly, and 
-                    effective in enhancing business visibility and digital reach."/>
-                <ProjectList title="PROJECT 3"/>
-                <ProjectList title="PROJECT 4" />
-                <ProjectList title="PROJECT 5" />
+                    effective in enhancing business visibility and digital reach."
+                    tools={["HTML", "Bootstrap", "CSS", "PHP", "MySQL"]}
+                />   
+                <ProjectList 
+                    title="KALKULATOR BMI"
+                    desc="Kalkulator BMI website is a personal project I developed to quickly and conveniently calculate Body Mass Index (BMI). With a minimalist and responsive design, users can instantly view the calculation results along with their category."
+                    tools={["HTML", "CSS", "JS"]}
+                />
+                <ProjectList 
+                    title="KONVERSI SUHU" 
+                    desc="The Konversi Suhu (Temperature Conversion website) is a personal project I developed to help users easily convert temperatures between various units, such as Celsius, Fahrenheit, and Kelvin. With a simple, responsive, and user-friendly design, this website allows users to obtain conversion results instantly and accurately."
+                    tools={["HTML", "CSS", "JS"]}
+                />
+                <ProjectList 
+                    title="BUTTER AVOCADO RIPENESS DETECTION APPLICATION" 
+                    desc="The Butter Avocado Ripeness Detection Application is a personal project I developed using the K-Nearest Neighbor method to classify ripeness levels based on color features. This application allows users to train data, test images, and obtain classification results objectively and efficiently."
+                    tools={["MATLAB"]}
+                />
             </div>
         </div>
     );
